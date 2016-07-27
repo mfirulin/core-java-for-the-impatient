@@ -1,2 +1,2 @@
-# core_java_for_the_impatient
+# core-java-for-the-impatient
 Core Java for the impatient exercises
