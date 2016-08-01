@@ -1,6 +1,6 @@
 import java.math.BigInteger;
 
-public class Test {
+public class Ch01Ex06 {
   public static void main(String[] args) {
     BigInteger n = BigInteger.valueOf(1);
     
