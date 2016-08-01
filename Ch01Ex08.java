@@ -11,8 +11,8 @@ public class Ch01Ex08 {
     String[] substrings = str.split("\\s+");
     System.out.println(Arrays.toString(substrings));
     
-    for (int i = 1; i <= str.length(); i++) {
-    	System.out.println(str.substring(0, i));
-    }
+    for (int i = 0; i < str.length(); i++)
+      for (int j = i; j < str.length(); j++)      
+    	System.out.println(str.substring(i, j + 1));
   }
 }
