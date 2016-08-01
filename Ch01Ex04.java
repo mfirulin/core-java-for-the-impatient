@@ -1,4 +1,4 @@
-public class Test {
+public class Ch01Ex04 {
   public static void main(String[] args) {
     System.out.println(Double.MIN_VALUE);
     System.out.println(Math.nextUp(0.0));
