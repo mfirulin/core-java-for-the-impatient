@@ -10,7 +10,7 @@ public class Ch01Ex10 {
     ArrayList<Integer> buffer = new ArrayList<>();
     
     for (int i = 0; i < numberOfDigits; i++)
-      buffer.add(generator.nextInt(10) + 48);
+      buffer.add(generator.nextInt(10) + 48 /* Digits start at 48 */);
     
     for (int i = 0; i < numberOfLetters; i++)
       buffer.add(generator.nextInt(26) + 65);
