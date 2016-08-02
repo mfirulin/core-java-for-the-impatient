@@ -8,7 +8,7 @@ public class Test {
       System.out.print("Press q/Q to exit: ");
       if (in.hasNext()) {
         String input = in.next();
-      	if ("q".equals(input.toLowerCase()))
+      	if ("q".equalsIgnoreCase(input))
         	break;
       }
     }
