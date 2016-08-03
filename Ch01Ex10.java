@@ -6,7 +6,7 @@ public class Ch01Ex10 {
   public static void main(String[] args) {
     Random generator = new Random();
     int numberOfDigits = generator.nextInt(10);
-	int numberOfLetters = generator.nextInt(10);
+	  int numberOfLetters = generator.nextInt(10);
     ArrayList<Integer> buffer = new ArrayList<>();
     
     for (int i = 0; i < numberOfDigits; i++)
@@ -16,7 +16,7 @@ public class Ch01Ex10 {
       buffer.add(generator.nextInt(26) + 65);
     
     Collections.shuffle(buffer);
-    System.out.println(buffer.toString());
+    System.out.println(buffer);
   
     for (int i : buffer)
     	System.out.print((char)i);
