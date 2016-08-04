@@ -12,9 +12,8 @@ public class Ch01Ex14 {
     
     for (rows = 0; rows < SIZE; rows++) {
       String line = in.nextLine().trim();
-      String[] words = line.split("\\s+");
-      
       if (line.isEmpty()) break;
+      String[] words = line.split("\\s+");
         
       for (columns = 0; columns < words.length && columns < SIZE; columns++) 
         square[rows][columns] = Integer.parseInt(words[columns]);
