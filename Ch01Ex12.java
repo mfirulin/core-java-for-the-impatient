@@ -40,15 +40,15 @@ public String toLowerCase(Locale locale) {
     if ((c >= Character.MIN_HIGH_SURROGATE)
         && (c <= Character.MAX_HIGH_SURROGATE)) {
       int supplChar = codePointAt(firstUpper);
+      firstUpper += Character.charCount(supplChar);
       if (supplChar != Character.toLowerCase(supplChar)) {
         found = true;
       }
-      firstUpper += Character.charCount(supplChar);
     } else {
+    	firstUpper++;
       if (c != Character.toLowerCase(c)) {
         found = true;
       }
-      firstUpper++;
     }
   }
 		
