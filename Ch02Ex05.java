@@ -18,8 +18,8 @@ public class Point {
   	return y;
   }
   
-  public Point translate(double x, double y) {
-  	return new Point(this.x + x, this.y + y);
+  public Point translate(double a, double b) {
+  	return new Point(x + a, y + b);
   }
   
   public Point scale(double c) {
