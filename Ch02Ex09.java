@@ -3,9 +3,10 @@
 * @author Mikhail Firulin
 * @version 1.0
 */
+
 public class Car {
-  private final double consumption; /* Fuel consumption (litres per kilometre) */
-  private final double tank; /* Max volume of the tank (litres) */
+  private final double CONSUMPTION; /* Fuel consumption (litres per kilometre) */
+  private final double TANK; /* Max volume of the tank (litres) */
   private double fuel; /* Amount of fuel in the tank (litres) */
   private double coordinate; /* Distance from the origin of coordinates (kilometres) */
   
@@ -15,8 +16,8 @@ public class Car {
   * @param consumption Fuel consumption (litres per kilometre)
   */
   public Car(double tank, double consumption) {
-  	this.tank = tank;
-    this.consumption = consumption;
+  	TANK = tank;
+    CONSUMPTION = consumption;
   }
 
   /**
@@ -40,10 +41,9 @@ public class Car {
   * @param fuel Amount of fuel to add (litres)
   */
   public void refuel(double fuel) {
-    if (this.fuel + fuel > tank)
-      this.fuel = tank;
-    else
-  	  this.fuel += fuel;
+    this.fuel += fuel;
+    if (this.fuel > TANK)
+      this.fuel = TANK;
   }
   
   /**
@@ -51,10 +51,10 @@ public class Car {
   * @param distance Distance to move (kilometres)
   */
   public void move(double distance) {
-    double expectedConsumption = distance * consumption;
+    double expectedConsumption = distance * CONSUMPTION;
     
     if(expectedConsumption > fuel) {
-      coordinate += fuel / consumption;
+      coordinate += fuel / CONSUMPTION;
       fuel = 0;
     }
     else {
