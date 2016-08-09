@@ -3,7 +3,7 @@
  * in the plane. There are modifying methods.
  * @author Mikhail Firulin
  * @version 1.0
- * /
+ */
 public class Point {
   private double x, y;
   
@@ -11,7 +11,7 @@ public class Point {
    * Create a point with predefined coordinates.
    * @param x X-coordinate
    * @param y Y-coordinate
-   * /
+   */
   public Point(double x, double y) {
   	this.x = x;
     this.y = y;
@@ -19,7 +19,7 @@ public class Point {
   
   /**
    * Create a point with default coordinates 0, 0.
-   * /
+   */
   public Point() {
   	this(0, 0);
   }
@@ -27,7 +27,7 @@ public class Point {
   /**
    * Get an X-coordinate.
    * @return X-coordinate
-   * /
+   */
   public double getX() {
   	return x;
   }
@@ -35,7 +35,7 @@ public class Point {
   /**
    * Get a Y-coordinate.
    * @return Y-coordinate
-   * / 
+   */ 
   public double getY() {
   	return y;
   }
@@ -44,7 +44,7 @@ public class Point {
    * Move a point to new coordinates, change the original point.
    * @param a X-coordinate shift
    * @param b Y-coordinate shift
-   * /
+   */
   public void translate(double a, double b) {
   	x += a;
     y += b;
@@ -52,7 +52,7 @@ public class Point {
   
   /** Scale coordinates according to a coefficient, change the original point.
    * @param c Coefficient of scaling 
-   * /
+   */
   public void scale(double c) {
   	x *= c; 
     y *= c;
