@@ -5,13 +5,17 @@ public class RandomNumbers {
   private static final Random generator = new Random();
   
   public static int randomElement(int[] a) {
-    int index = generator.nextInt(a.length);
-    return a[index];
+    if (a.length > 0)
+      return a[generator.nextInt(a.length)];
+    else
+      return 0;
   }
   
   public static int randomElement(ArrayList<Integer> a) {
-    int index = generator.nextInt(a.size());
-	  return a.get(index);
+    if (a.size() > 0)
+	  return a.get(generator.nextInt(a.size()));
+    else
+      return 0;
   }
 }
 
