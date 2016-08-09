@@ -19,8 +19,6 @@ public class Point {
   
   /**
    * Create a point with default coordinates 0, 0.
-   * @param x X-coordinate
-   * @param y Y-coordinate
    * /
   public Point() {
   	this(0, 0);
