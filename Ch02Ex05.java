@@ -1,6 +1,6 @@
 /**
  * Class <code>Point</code> presents a geometric point
- * in the plane.
+ * in the plane. No modifying methods.
  * @author Mikhail Firulin
  * @version 1.0
  * /
