@@ -1,32 +1,31 @@
-
 public class Queue {
 
   private static class Node {
   	String string;
-    Node nextNode;
+    Node next;
   }
   
-  private Node firstNode;
-  private Node lastNode;
+  private Node head;
+  private Node tail;
   
   public void add(String string) {
   	Node node = new Node();
     node.string = string;
     
-    if (firstNode == null) // Add the first node in the queue
-  	  firstNode = lastNode = node;
+    if (head == null) // Add the first node in the queue
+  	  head = tail = node;
           
-    lastNode.nextNode = node;
-    lastNode = node;
+    tail.next = node;
+    tail = node;
   }
   
   public void remove() {
-    if (firstNode == null) return; // No nodes to remove
+    if (head != null) {
+        head = head.next;
     
-  	firstNode = firstNode.nextNode;
-    
-    if (firstNode == null) // The last node in the queue was just removed
-      lastNode = null;
+        if (head == null) // The last node was just removed
+            tail = null;
+    }
   }
   
   public static void main(String[] args) {
@@ -34,8 +33,8 @@ public class Queue {
     for (int i = 0; i < 5; i++)
       queue.add("String " + i);
     
-    System.out.println(queue.firstNode.string);
-    System.out.println(queue.lastNode.string);
+    System.out.println(queue.head.string);
+    System.out.println(queue.tail.string);
     
     for (int i = 0; i < 6; i++)
       queue.remove();
