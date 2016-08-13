@@ -32,13 +32,13 @@ public class Invoice {
   public void removeItem(String description) {
     Item item = findItem(description);
     if (item != null)
-  	  items.remove(items.indexOf(item));
+    	items.remove(item);
   }
   
   public void printItem(String description) {
   	Item item = findItem(description);
     if (item != null)
-      System.out.println(item.description + ": quantity=" + item.quantity + " price=" + item.unitPrice);
+      System.out.println(description + ": quantity=" + item.quantity + " price=" + item.unitPrice);
     else
       System.out.println(description + ": nothing found");
   }
