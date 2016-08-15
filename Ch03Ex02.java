@@ -7,25 +7,25 @@ public class Employee implements Measurable {
   private double salary;
   
   public Employee(String name, double salary) {
-  	this.name = name;
+    this.name = name;
     this.salary = salary;
   }
   
   public double getMeasure() {
-  	return salary;
+    return salary;
   }
   
   public String getName() {
-  	return name;
+    return name;
   }
   
   public static double average(Measurable[] objects) {
-  	double sum = 0;
+    double sum = 0;
     int count = 0;
     
-    for (Measurable o : objects)
-      if (o != null) {
-      	sum += o.getMeasure();
+    for (Measurable obj : objects)
+      if (obj != null) {
+      	sum += obj.getMeasure();
     	count++;
     }
     
@@ -33,7 +33,7 @@ public class Employee implements Measurable {
   }
   
   public static Measurable largest(Measurable[] objects) {
-  	double largestMeasure = 0;
+    double largestMeasure = 0;
     Measurable largestObject = null;
     
     for (Measurable obj : objects)
@@ -43,7 +43,7 @@ public class Employee implements Measurable {
           largestObject = obj;
         }
     
-  	return largestObject;
+    return largestObject;
   }
   
   public static void main(String[] args) {
@@ -52,7 +52,7 @@ public class Employee implements Measurable {
     employees[1] = new Employee("Helen", 1150);
     employees[2] = new Employee("Mark", 1120);
   
-  	System.out.println(average(employees));	
+    System.out.println(average(employees));	
     System.out.println(((Employee)largest(employees)).getName());
   }
 }
