@@ -19,9 +19,9 @@ public class Employee implements Measurable {
   	double sum = 0;
     int count = 0;
     
-    for (Measurable o : objects)
-      if (o != null) {
-      	sum += o.getMeasure();
+    for (Measurable obj : objects)
+      if (obj != null) {
+      	sum += obj.getMeasure();
         count++;
     }
     
