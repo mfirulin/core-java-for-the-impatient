@@ -4,18 +4,11 @@ interface IntSequence {
   
   public static IntSequence constant(int a) {
     return new IntSequence() {
-
-      public boolean hasNext() {
-        return true;
-      }
-      
-      public int next() {
-          return a;
-      }
+      public boolean hasNext() { return true; }
+      public int next() { return a; }
     };
   }
 }
-
 
 public class Test {
   public static void main(String[] args) {
