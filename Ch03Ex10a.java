@@ -1,5 +1,4 @@
 import java.io.File;
-import java.util.Arrays;
 
 public class Ch03Ex10 {
   
