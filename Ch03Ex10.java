@@ -4,7 +4,10 @@ import java.util.Arrays;
 public class Ch03Ex10 {
   
   private static void printSubDirs(String name) {
-  	File[] dirs = new File(name).listFiles((f) -> f.isDirectory());
+    File[] dirs = new File(name).listFiles((f) -> f.isDirectory());
+    /* or:
+    File[] dirs = new File(name).listFiles(File::isDirectory);
+    */
     
     if (dirs == null) return;
     
