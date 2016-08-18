@@ -1,6 +1,5 @@
 import java.io.File;
 import java.io.FileFilter;
-import java.util.Arrays;
 
 public class Ch03Ex10 {
   
