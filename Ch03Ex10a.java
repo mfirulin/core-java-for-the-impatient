@@ -3,10 +3,8 @@ import java.io.File;
 public class Ch03Ex10 {
   
   private static void printSubDirs(String name) {
-    File[] dirs = new File(name).listFiles((f) -> f.isDirectory());
-    /* or:
     File[] dirs = new File(name).listFiles(File::isDirectory);
-    */
+    /* Or: File[] dirs = new File(name).listFiles((f) -> f.isDirectory()); */
     
     if (dirs == null) return;
     
