@@ -3,8 +3,7 @@ import java.io.File;
 public class Ch03Ex11 {
   
   private static void printAllFilesWithExtension(String pathName, String extension) {
-  	File directory = new File(pathName);
-    String[] files = directory.list((dir, name) -> name.endsWith("." + extension));
+    String[] files = new File(pathName).list((dir, name) -> name.endsWith("." + extension));
     if (files == null) return;
     
     for (String file : files) 
