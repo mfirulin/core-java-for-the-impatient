@@ -24,6 +24,10 @@ public class Ch03Ex12 {
  
         Arrays.sort(files, Comparator.comparing(File::isFile).
                            thenComparing(File::getName));
+        /* Or with lambda:
+         *      Arrays.sort(files, Comparator.comparing((File f) -> f.isFile()).
+         *                  thenComparing((File f) -> f.getName()));
+        */
         
         printFiles(files);    
     }
