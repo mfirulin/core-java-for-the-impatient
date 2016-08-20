@@ -1,5 +1,5 @@
 import java.util.Arrays;
-import java.util.Comparator;
+import static java.util.Comparator.*;
 
 class Employee {
   private String name;
@@ -35,9 +35,15 @@ public class Ch03Ex14 {
       new Employee("Mark", 1200),
       new Employee("Joe", 1400)
     };
-    
-    Arrays.sort(employees, Comparator.comparing(Employee::getSalary).thenComparing(Employee::getName));
-    // Arrays.sort(employees, Comparator.comparing((Employee e) -> e.getSalary()).thenComparing((Employee e) -> e.getName()));
+
+    // Natural order
+    Arrays.sort(employees, comparing(Employee::getSalary).
+        thenComparing(Employee::getName));
+    Employee.printEmployees(employees);
+    System.out.println();
+    // Reverse order
+    Arrays.sort(employees, comparing(Employee::getSalary, reverseOrder()).
+        thenComparing(Employee::getName));
     Employee.printEmployees(employees);
   }
 }
