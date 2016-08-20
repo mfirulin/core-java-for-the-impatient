@@ -1,4 +1,3 @@
-
 public class Ch03Ex13 implements Runnable {
     private int id;
     
@@ -12,10 +11,8 @@ public class Ch03Ex13 implements Runnable {
     
     public static Runnable joinTasks(Runnable[] tasks) {
         return () -> {
-            for (Runnable ta : tasks) {
-                Thread th = new Thread(ta);
-                th.start();
-            }
+            for (Runnable task : tasks)
+                new Thread(task).start();
         };
     }
     
@@ -23,8 +20,7 @@ public class Ch03Ex13 implements Runnable {
         Ch03Ex13[] tasks = new Ch03Ex13[10];
         for (int i = 0; i < tasks.length; i++)
             tasks[i] = new Ch03Ex13(i + 1);
-            
-        Runnable superTask = joinTasks(tasks);
-        new Thread(superTask).start();  
+        
+        new Thread(joinTasks(tasks)).start();
     }
 }
