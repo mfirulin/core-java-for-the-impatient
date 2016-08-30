@@ -1,8 +1,7 @@
-
 class Point {
   private double x, y;
   
-  public Point(double x, double, y) {
+  public Point(double x, double y) {
   	this.x = x;
     this.y = y;
   }
@@ -10,6 +9,7 @@ class Point {
   public double getX() { return x; }
   public double getY() { return y; }
 }
+
 
 public class LabeledPoint extends Point {
   private String label;
@@ -23,6 +23,6 @@ public class LabeledPoint extends Point {
   
   public static void main(String[] args) {
   	LabeledPoint lpoint = new LabeledPoint("Point", 1.0, 1.0);
-    System.out.println(lpoint.getLabel() + " " + lpoint.getX() + " " lpoint.getY());
+    System.out.println(lpoint.getLabel() + " " + lpoint.getX() + " " + lpoint.getY());
   }
 }
