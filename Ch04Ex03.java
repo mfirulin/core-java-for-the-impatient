@@ -41,10 +41,7 @@ public class LabeledPoint extends Point {
   public String getLabel() { return label; }
   
   public double[] getCoordinates() {
-  	double[] a = new double[2];
-    a[0] = x;
-    a[1] = y;
-    return a;
+    return new double[] {x, y};
   }
   
   public String toString() {
