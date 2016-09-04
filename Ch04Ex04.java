@@ -12,7 +12,7 @@ class Point {
   public double getY() { return y; }
   
   public String toString() {
-  	return getClass().getName() + "[x=" + x + ",y=" + y + "]";
+  	return getClass().getName() + "[x=" + x + ", y=" + y + "]";
   }
   
   public boolean equals(Object other) {
@@ -43,7 +43,7 @@ abstract class Shape {
   }
   
   public String toString() {
-    return getClass().getName() + "[x=" + point.getX() + ",y=" + point.getY() + "]";
+    return getClass().getName() + "[x=" + point.getX() + ", y=" + point.getY() + "]";
   }
   
   public abstract Point getCenter();
@@ -74,7 +74,13 @@ class Rectangle extends Shape {
   }
   
   public Point getCenter() {
-  	return point;
+    double x = (point.getX() + width) / 2;
+    double y = (point.getY() + height) / 2;
+  	return new Point(x, y);
+  }
+  
+  public String toString() {
+  	return super.toString() + "[width=" + width + ", height=" + height + "]";
   }
 }
  
@@ -93,7 +99,8 @@ class Line extends Shape {
   }
   
   public String toString() {
-  	return getClass().getName() + "[from.x=" + point.getX() + " from.y=" + point.getY() + " to.x=" + to.getX() + " to.y=" + to.getY() + "]";
+  	return getClass().getName() + "[from.x=" + point.getX() + ", from.y=" + 
+      point.getY() + ", to.x=" + to.getX() + ", to.y=" + to.getY() + "]";
   }
 }
 
@@ -103,10 +110,17 @@ public class Ch04Ex04 {
     Circle circle = new Circle(point, 1.0);
     circle.moveBy(1.0, 1.0);
     System.out.println(circle);
+    System.out.println(circle.getCenter());
+    
+    Point topLeft = new Point(0, 0);
+    Rectangle rectangle = new Rectangle(topLeft, 1.5, 3.4);
+    System.out.println(rectangle);
+    System.out.println(rectangle.getCenter());
     
     Point from = new Point(0, 0);
     Point to = new Point(1, 1);
     Line line = new Line(from, to);
     System.out.println(line);
+    System.out.println(line.getCenter());
   }
 }
