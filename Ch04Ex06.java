@@ -40,10 +40,10 @@ class DiscountedItem extends Item {
   }
   
   public boolean equals(Object other) {
-    if (other instanceof Item)
-      return super.equals(other);
-    else if (other instanceof DiscountedItem)
+    if (other instanceof DiscountedItem)
       return super.equals(other) && discount == ((DiscountedItem) other).discount;
+    else if (other instanceof Item)
+      return super.equals(other);
     else
       return false;
   }
@@ -58,6 +58,5 @@ public class Ch04Ex06 {
     System.out.println(x.equals(y));
     System.out.println(y.equals(x));
     System.out.println(y.equals(z));
-    System.out.println(x.equals(z));
   }
 }
