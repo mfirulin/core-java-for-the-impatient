@@ -25,7 +25,7 @@ public class Ch05Ex01 {
                 System.out.println(d);
         }
         catch (IOException ex) {
-            System.out.println(ex);
+            System.err.println(ex);
         }
     }
 }
