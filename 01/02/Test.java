@@ -12,8 +12,7 @@ public class Test {
         
         // Realization with '%'
         angle %= 360;
-        if (angle < 0)
-            angle += 360;
+        if (angle < 0) angle += 360;
         System.out.println(angle);
     }
 }
