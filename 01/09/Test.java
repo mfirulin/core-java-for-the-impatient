@@ -1,6 +1,6 @@
 public class Test {
     public static void main(String[] args) {
-	    String str1 = "Hello, World!";
+        String str1 = "Hello, World!";
         String str2 = str1.substring(7, 12);
         String str3 = "World";
         String str4 = new String(str2);
