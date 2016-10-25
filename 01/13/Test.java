@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Ch01Ex13 {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Random generator = new Random();
         ArrayList<Integer> numbers = new ArrayList<>();
         ArrayList<Integer> result = new ArrayList<>();
