@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class Ch01Ex14 {
+public class Test {
 
     private static final int SIZE = 5;
   
