@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Test {
     public static void main(String[] args) {
-	    Scanner in = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
         System.out.print("Enter a number of lines: ");
         int n = in.nextInt();
         ArrayList<ArrayList<Integer>> triangle = new ArrayList<>();
