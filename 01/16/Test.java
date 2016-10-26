@@ -9,5 +9,6 @@ public class Test {
         System.out.println(average(-1, 3.14));
         System.out.println(average(2, 1));
         System.out.println(average(-3, 4.5, 10.11, 0));
+        System.out.println(average(10));
     }
 }
