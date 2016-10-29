@@ -20,25 +20,19 @@ public class Point {
     /**
      * Create a point with default coordinates 0, 0.
      */
-    public Point() {
-        this(0, 0);
-    }
+    public Point() { this(0, 0); }
 
     /**
      * Get an X-coordinate.
      * @return X-coordinate
      */
-    public double getX() {
-        return x;
-    }
+    public double getX() { return x; }
 
     /**
      * Get a Y-coordinate.
      * @return Y-coordinate
      */ 
-    public double getY() {
-        return y;
-    }
+    public double getY() { return y; }
 
     /**
      * Move a point to new coordinates, return a new point. 
@@ -47,18 +41,14 @@ public class Point {
      * @param b Y-coordinate shift
      * @return A point with new coordinates
     */
-    public Point translate(double a, double b) {
-        return new Point(x + a, y + b);
-    }
+    public Point translate(double a, double b) { return new Point(x + a, y + b); }
 
     /** Scale coordinates according to a coefficient, return a new point. 
      * The original point is not changed.
      * @param c Coefficient of scaling 
      * @return A point with new coordinates
      */
-    public Point scale(double c) {
-        return new Point(x*c, y*c);
-    }
+    public Point scale(double c) { return new Point(x*c, y*c); }
 
 
     public static void main(String[] args) {
