@@ -10,8 +10,8 @@ public class Point {
     /**
      * Create a point with predefined coordinates.
      * @param x X-coordinate
-    * @param y Y-coordinate
-    */
+     * @param y Y-coordinate
+     */
     public Point(double x, double y) {
         this.x = x;
         this.y = y;
@@ -24,8 +24,8 @@ public class Point {
   
     /**
      * Get an X-coordinate.
-    * @return X-coordinate
-    */
+     * @return X-coordinate
+     */
     public double getX() { return x; }
   
     /**
