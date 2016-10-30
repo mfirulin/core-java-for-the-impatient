@@ -1,7 +1,7 @@
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 
-public class Test {
+public class Cal {
     public static void main(String[] args) {
         LocalDate date = LocalDate.now().withDayOfMonth(1);
         int month;
