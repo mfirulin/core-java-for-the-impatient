@@ -12,7 +12,7 @@ public class Test2 {
     }
   
     private static void printSubDirs(String name) {
-  	    File[] dirs = new File(name).listFiles(isDirectory());
+        File[] dirs = new File(name).listFiles(isDirectory());
     
         if (dirs == null) return;
     
@@ -28,6 +28,6 @@ public class Test2 {
         if (args.length > 0)
             printSubDirs(args[0]);
         else
-  	        printSubDirs(".");
+            printSubDirs(".");
     }
 }
