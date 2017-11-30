@@ -14,12 +14,12 @@ class Employee {
   
     public double getSalary() { return salary; }
   
-    public String toString() {
-  	    return "name=" + name + " salary=" + salary;
+    public String toString() {    
+        return "name=" + name + " salary=" + salary;
     }
   
     public static void printEmployees(Employee[] employees) {
-  	    for (Employee e : employees)
+        for (Employee e : employees)
             if (e != null)
                 System.out.println(e);
     }
