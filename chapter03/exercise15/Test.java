@@ -5,7 +5,7 @@ interface IntSequence {
     int next();
 }
 
-public class Ch03Ex15 {
+public class Test {
     private static Random generator = new Random();
     
     public static class RandomSequence implements IntSequence {
