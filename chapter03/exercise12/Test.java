@@ -2,7 +2,7 @@ import java.io.File;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class Ch03Ex12 {
+public class Test {
     public static File[] getFiles(String pathName) {
         return new File(pathName).listFiles();
     }
