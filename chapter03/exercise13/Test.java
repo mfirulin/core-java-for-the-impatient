@@ -1,7 +1,7 @@
-public class Ch03Ex13 implements Runnable {
+public class Test implements Runnable {
     private int id;
     
-    public Ch03Ex13(int id) {
+    public Test(int id) {
         this.id = id;
     }
     
@@ -17,9 +17,9 @@ public class Ch03Ex13 implements Runnable {
     }
     
     public static void main(String[] args) {
-        Ch03Ex13[] tasks = new Ch03Ex13[10];
+        Test[] tasks = new Test[10];
         for (int i = 0; i < tasks.length; i++)
-            tasks[i] = new Ch03Ex13(i + 1);
+            tasks[i] = new Test(i + 1);
         
         new Thread(joinTasks(tasks)).start();
     }
