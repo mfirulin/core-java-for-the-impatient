@@ -14,6 +14,6 @@ public class Test {
         if (args.length == 2)
             printAllFilesWithExtension(args[0], args[1]);
         else
-  	        printAllFilesWithExtension(".", "java");
+            printAllFilesWithExtension(".", "java");
     }
 }
