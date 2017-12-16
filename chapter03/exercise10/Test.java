@@ -20,6 +20,6 @@ public class Test {
         if (args.length > 0)
             printSubDirs(args[0]);
         else
-  	        printSubDirs(".");
+            printSubDirs(".");
     }
 }
