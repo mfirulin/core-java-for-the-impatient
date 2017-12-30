@@ -13,7 +13,7 @@ class Point {
     public double getY() { return y; }
   
     public String toString() {
-  	    return getClass().getName() + "[x=" + x + ",y=" + y + "]";
+        return getClass().getName() + "[x=" + x + ",y=" + y + "]";
     }
   
     public boolean equals(Object other) {
@@ -59,7 +59,7 @@ public class LabeledPoint extends Point {
     }
   
     public static void main(String[] args) {
-  	    LabeledPoint lpoint1 = new LabeledPoint("LabeledPoint", 1.0, 1.0);
+        LabeledPoint lpoint1 = new LabeledPoint("LabeledPoint", 1.0, 1.0);
         System.out.println(lpoint1);
         LabeledPoint lpoint2 = new LabeledPoint("LabeledPoint", 1.0, 1.0);
         System.out.println(lpoint1.equals(lpoint2));
