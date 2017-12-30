@@ -45,17 +45,17 @@ public class LabeledPoint extends Point {
     }
   
     public String toString() {
-  	    return super.toString() + "[label=" + label + "]"; 
+        return super.toString() + "[label=" + label + "]"; 
     }
   
     public boolean equals(Object other) {
-  	    if (!super.equals(other)) return false;
+        if (!super.equals(other)) return false;
         LabeledPoint otherLabeledPoint = (LabeledPoint)other;
         return Objects.equals(label, otherLabeledPoint.label);
     }
   
     public int hashCode() {
-  	    return Objects.hash(super.hashCode(), label);
+        return Objects.hash(super.hashCode(), label);
     }
   
     public static void main(String[] args) {
