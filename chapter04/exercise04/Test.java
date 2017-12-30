@@ -60,7 +60,7 @@ class Circle extends Shape {
     public Point getCenter() { return point; }
   
     public String toString() {
-  	    return super.toString() + "[radius=" + radius + "]";
+        return super.toString() + "[radius=" + radius + "]";
     }
 }
 
@@ -95,7 +95,7 @@ class Line extends Shape {
     public Point getCenter() {
         double x = (point.getX() + to.getX()) / 2;
         double y = (point.getY() + to.getY()) / 2;
-  	    return new Point(x, y);
+        return new Point(x, y);
     }
   
     public String toString() {
