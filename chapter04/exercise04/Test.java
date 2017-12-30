@@ -104,7 +104,7 @@ class Line extends Shape {
   }
 }
 
-public class Ch04Ex04 {
+public class Test {
   public static void main(String[] args) {
     Point point = new Point(0, 0);
     Circle circle = new Circle(point, 1.0);
