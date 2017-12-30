@@ -25,7 +25,7 @@ class Point {
     }
   
     public int hashCode() {
-  	    return Objects.hash(x, y);
+        return Objects.hash(x, y);
     }
 }
 
@@ -34,7 +34,7 @@ public class LabeledPoint extends Point {
     private String label;
   
     public LabeledPoint(String label, double x, double y) {
-  	    super(x, y);
+        super(x, y);
         this.label = label;
     }
   
