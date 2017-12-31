@@ -85,7 +85,7 @@ class Rectangle extends Shape implements Cloneable {
     public Point getCenter() {
         double x = (point.getX() + width) / 2;
         double y = (point.getY() + height) / 2;
-  	    return new Point(x, y);
+        return new Point(x, y);
     }
   
     public String toString() {
