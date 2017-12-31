@@ -21,7 +21,7 @@ class Item {
 public class Test {
     public static String toString(Object obj) {
         Class<?> cl = obj.getClass();
-  	    String str = cl.getName();
+        String str = cl.getName();
         str += "[";
     
         for (Field f : cl.getDeclaredFields()) {
