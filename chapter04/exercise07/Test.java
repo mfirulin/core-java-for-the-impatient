@@ -15,7 +15,7 @@ enum Color {
 
 public class Test {
     private static void func(Color color) {
-   	    switch (color) {
+    	switch (color) {
             case RED: System.out.println("Red"); break;
       	    case BLUE: System.out.println("Blue"); break;
       	    case GREEN: System.out.println("Green"); break;
@@ -24,10 +24,10 @@ public class Test {
     }
   
     public static void main(String[] args) {
-	    for (Color c : Color.values())
-      	    System.out.println(c);
+	for (Color c : Color.values())
+      	System.out.println(c);
     
-   	    System.out.println(Color.getRed());
+        System.out.println(Color.getRed());
         System.out.println(Color.getBlue());
         System.out.println(Color.getGreen());
         
