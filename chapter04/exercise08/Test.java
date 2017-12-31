@@ -8,7 +8,7 @@ public class Test {
   
     public static void main(String[] args) {
         Class<?> cl = String[].class;
-  	    System.out.println(cl.getName());
+        System.out.println(cl.getName());
         System.out.println(cl.getSimpleName());
         System.out.println(cl.getCanonicalName());
         System.out.println(cl.getTypeName());
@@ -17,7 +17,7 @@ public class Test {
         System.out.println();
     
         cl = Integer[].class;
-  	    System.out.println(cl.getName());
+        System.out.println(cl.getName());
         System.out.println(cl.getSimpleName());
         System.out.println(cl.getCanonicalName());
         System.out.println(cl.getTypeName());
@@ -26,7 +26,7 @@ public class Test {
         System.out.println();
     
         cl = int.class;
-  	    System.out.println(cl.getName());
+        System.out.println(cl.getName());
         System.out.println(cl.getSimpleName());
         System.out.println(cl.getCanonicalName());
         System.out.println(cl.getTypeName());
@@ -35,7 +35,7 @@ public class Test {
         System.out.println();
     
         cl = Test.class;
-  	    System.out.println(cl.getName());
+        System.out.println(cl.getName());
         System.out.println(cl.getSimpleName());
         System.out.println(cl.getCanonicalName());
         System.out.println(cl.getTypeName());
@@ -44,7 +44,7 @@ public class Test {
         System.out.println();
 
         cl = InternalClass.class;
-  	    System.out.println(cl.getName());
+        System.out.println(cl.getName());
         System.out.println(cl.getSimpleName());
         System.out.println(cl.getCanonicalName());
         System.out.println(cl.getTypeName());
@@ -53,7 +53,7 @@ public class Test {
         System.out.println();
     
         cl = InternalStaticClass.class;
-  	    System.out.println(cl.getName());
+        System.out.println(cl.getName());
         System.out.println(cl.getSimpleName());
         System.out.println(cl.getCanonicalName());
         System.out.println(cl.getTypeName());
