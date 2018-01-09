@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.nio.file.Paths;
 import java.io.IOException;
 
-public class Ch05Ex01 {
+public class Test {
     public static ArrayList<Double> readValues(String filename)
         throws IOException
     {
@@ -20,7 +20,7 @@ public class Ch05Ex01 {
         ArrayList<Double> numbers;
         
         try {
-            numbers = readValues("Ch05Ex01.txt");
+            numbers = readValues("Test.txt");
             for (double d : numbers)
                 System.out.println(d);
         }
