@@ -4,7 +4,7 @@ import java.nio.file.Paths;
 import java.io.IOException;
 import java.io.FileNotFoundException;
 
-public class Ch05Ex05 {
+public class Test {
     public static void readWriteValues(String input, String output) {
         Scanner in = null;
         PrintWriter out = null;
