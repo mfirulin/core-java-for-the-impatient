@@ -19,19 +19,19 @@ public class Test {
     public static double sumOfValues(String filename)
         throws IOException
     {
-		ArrayList<Double> numbers;
+        ArrayList<Double> numbers;
 		
-		try {
-			numbers = readValues(filename);
+        try {
+            numbers = readValues(filename);
         }
-		catch (IOException ex) {
-			throw ex;
+            catch (IOException ex) {
+            throw ex;
         }
 
-		double sum = 0;
-		
-		for (double n : numbers) 
-			sum += n;
+        double sum = 0;
+	
+        for (double n : numbers) 
+            sum += n;
 		
         return sum;
     }
