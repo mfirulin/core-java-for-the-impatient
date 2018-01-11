@@ -20,7 +20,6 @@ public class Test {
         throws IOException
     {
 		ArrayList<Double> numbers;
-		double sum = 0;
 		
 		try {
 			numbers = readValues(filename);
@@ -29,6 +28,8 @@ public class Test {
 			throw ex;
         }
 
+		double sum = 0;
+		
 		for (double n : numbers) 
 			sum += n;
 		
