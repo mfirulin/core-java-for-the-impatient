@@ -11,8 +11,8 @@ public class Test {
         ArrayList<Double> numbers = new ArrayList<>();
         
         try (Scanner in = new Scanner(Paths.get(filename))) {
-			while(in.hasNext())
-				numbers.add(in.nextDouble());
+            while(in.hasNext())
+                numbers.add(in.nextDouble());
         }
         return numbers;
     }
@@ -20,18 +20,18 @@ public class Test {
     public static double sumOfValues(String filename)
         throws IOException, InputMismatchException
     {
-		ArrayList<Double> numbers;
-		double sum = 0;
+        ArrayList<Double> numbers;
+        double sum = 0;
 		
-		try {
-			numbers = readValues(filename);
+        try {
+            numbers = readValues(filename);
         }
-		catch (IOException e) {
-			throw e;
+            catch (IOException e) {
+            throw e;
         }
 
-		for (double n : numbers) 
-			sum += n;
+        for (double n : numbers) 
+            sum += n;
 		
         return sum;
     }
@@ -44,11 +44,11 @@ public class Test {
         catch (IOException e) {
             System.err.println("Can't open the file: " + e);
         }
-		catch (InputMismatchException e) {
-			System.err.println("Wrong input: " + e);
-		}
-		catch (Exception e) {
-			System.err.println("Something went wrong: " + e);
-		}
+        catch (InputMismatchException e) {
+            System.err.println("Wrong input: " + e);
+        }
+        catch (Exception e) {
+            System.err.println("Something went wrong: " + e);
+        }
     }
 }
