@@ -25,7 +25,7 @@ public class Test {
         try {
             numbers = readValues(filename);
         }
-            catch (IOException e) {
+        catch (IOException e) {
             throw e;
         }
 
