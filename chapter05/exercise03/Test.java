@@ -21,7 +21,6 @@ public class Test {
         throws IOException, InputMismatchException
     {
         ArrayList<Double> numbers;
-        double sum = 0;
 		
         try {
             numbers = readValues(filename);
@@ -30,6 +29,8 @@ public class Test {
             throw e;
         }
 
+        double sum = 0;
+		
         for (double n : numbers) 
             sum += n;
 		
