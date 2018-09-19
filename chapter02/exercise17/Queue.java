@@ -42,8 +42,7 @@ public class Queue {
     }
 
     public Iterator iterator() {
-        Iterator iterator = new Iterator();
-        return iterator;
+        return new Iterator(); 
     }
 
     public static void main(String[] args) {
