@@ -8,8 +8,6 @@ public class Queue {
     public class Iterator {
         Node next = head;
 
-        public void set() { next = head; }
-
         public boolean hasNext() { return next != null; }
 
         public Node next() {
@@ -26,11 +24,12 @@ public class Queue {
         Node node = new Node();
         node.string = string;
 
-        if (head == null) // Add the first node in the queue
+        if (head == null) { // Add the first node in the queue
             head = tail = node;
-
-        tail.next = node;
-        tail = node;
+        } else { // Add all other nodes
+            tail.next = node;
+            tail = node;
+        }
     }
 
     public void remove() {
@@ -59,7 +58,7 @@ public class Queue {
 
         for (int i = 0; i < 2; i++) queue.remove();
 
-        iterator.set();
+        iterator = queue.iterator();
         while (iterator.hasNext())
             System.out.println(iterator.next().string);
     }
