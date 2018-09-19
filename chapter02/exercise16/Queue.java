@@ -12,11 +12,12 @@ public class Queue {
         Node node = new Node();
         node.string = string;
 
-        if (head == null) // Add the first node in the queue
+        if (head == null) { // Add the first node in the queue
             head = tail = node;
-
-        tail.next = node;
-        tail = node;
+        } else { // Add all other nodes
+            tail.next = node;
+            tail = node;
+        }
     }
 
     public void remove() {
@@ -28,13 +29,20 @@ public class Queue {
         }
     }
 
+    public void print() {
+        Node temp = head;
+        while (temp != null) {
+            System.out.println(temp.string);
+            temp = temp.next;
+        }
+    }
+    
     public static void main(String[] args) {
         Queue queue = new Queue();
         for (int i = 0; i < 5; i++) queue.add("String " + i);
-
-        System.out.println(queue.head.string);
-        System.out.println(queue.tail.string);
+        queue.print();
 
         for (int i = 0; i < 6; i++) queue.remove();
+        queue.print();
     }
 }
