@@ -21,7 +21,7 @@ public class Employee implements Measurable {
     
         for (Measurable obj : objects)
             if (obj != null) {
-       	        sum += obj.getMeasure();
+                sum += obj.getMeasure();
                 count++;
             }
     
