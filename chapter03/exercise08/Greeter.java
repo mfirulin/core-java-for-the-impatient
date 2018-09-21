@@ -13,7 +13,7 @@ public class Greeter implements Runnable {
     }
   
     public static void main(String[] args) {
-  	    Runnable task1 = new Greeter("Mark", 10000);
+        Runnable task1 = new Greeter("Mark", 10000);
         Runnable task2 = new Greeter("Anna", 10000);
         Thread thread1 = new Thread(task1);
         Thread thread2 = new Thread(task2);
