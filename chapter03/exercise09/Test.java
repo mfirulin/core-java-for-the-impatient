@@ -2,11 +2,11 @@ public class Test implements Runnable {
     private String name;
   
     public Test(String name) {
-  	    this.name = name;
+        this.name = name;
     }
   
     public void run() {
-  	    System.out.println("I am " + name);
+        System.out.println("I am " + name);
     }
 
     public static void runTogether(Runnable... tasks) {
@@ -22,7 +22,7 @@ public class Test implements Runnable {
     }
   
     public static void main(String[] args) {
-  	    Runnable[] tasks = new Runnable[3];
+        Runnable[] tasks = new Runnable[3];
         tasks[0] = new Test("Scott");
         tasks[1] = new Test("Peter");
         tasks[2] = new Test("Anna");
