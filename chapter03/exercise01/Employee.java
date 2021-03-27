@@ -3,7 +3,7 @@ interface Measurable {
 }
 
 public class Employee implements Measurable {
-    private String name = "";
+    private String name;
     private double salary;
   
     public Employee(String name, double salary) {
