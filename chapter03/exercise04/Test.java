@@ -22,7 +22,7 @@ interface IntSequence {
 
 public class Test {
     public static void main(String[] args) {
-  	    IntSequence digits = IntSequence.of(-1, 0, 1, 2, 3, 4, 5);
+        IntSequence digits = IntSequence.of(-1, 0, 1, 2, 3, 4, 5);
         
         while (digits.hasNext())
             System.out.println(digits.next());
