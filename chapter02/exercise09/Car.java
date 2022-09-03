@@ -48,11 +48,10 @@ public class Car {
     public void move(double distance) {
         double expectedConsumption = distance * CONSUMPTION;
     
-        if(expectedConsumption > fuel) {
+        if (expectedConsumption > fuel) {
             coordinate += fuel / CONSUMPTION;
             fuel = 0;
-        }
-        else {
+        } else {
             coordinate += distance;
             fuel -= expectedConsumption;
         }
