@@ -6,7 +6,7 @@ public String toLowerCase(Locale locale) {
 
   /* Now check if there are any characters that need to be changed. */
   scan: {
-    for (firstUpper = 0 ; firstUpper < len; ) {
+    for (firstUpper = 0; firstUpper < len; ) {
       char c = value[firstUpper];
       if ((c >= Character.MIN_HIGH_SURROGATE)
           && (c <= Character.MAX_HIGH_SURROGATE)) {
