@@ -21,7 +21,7 @@ public class SquareSequence implements Sequence<BigInteger> {
     public static void main(String[] args) {
         Sequence<BigInteger> seq = new SquareSequence();
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 12; i++) {
             if (seq.hasNext()) {
                 System.out.print(seq.next() + " ");
             }

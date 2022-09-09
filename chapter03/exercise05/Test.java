@@ -14,7 +14,7 @@ public class Test {
     public static void main(String[] args) {
         IntSequence constant = IntSequence.constant(1);
     
-        for(int i = 0; i < 5 && constant.hasNext(); i++)
+        for (int i = 0; i < 5; i++)
             System.out.println(constant.next());
     }
 }
