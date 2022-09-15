@@ -54,11 +54,11 @@ public class LabeledPoint extends Point {
     }
   
     public static void main(String[] args) {
-        LabeledPoint lpoint1 = new LabeledPoint("LabeledPoint", 1.0, 1.0);
-        System.out.println(lpoint1);
-        LabeledPoint lpoint2 = new LabeledPoint("LabeledPoint", 1.0, 1.0);
-        System.out.println(lpoint1.equals(lpoint2));
-        System.out.println(lpoint1.hashCode());
-        System.out.println(lpoint2.hashCode());
+        LabeledPoint lp1 = new LabeledPoint("LabeledPoint", 1.0, 1.0);
+        System.out.println(lp1);
+        LabeledPoint lp2 = new LabeledPoint("LabeledPoint", 1.0, 1.0);
+        System.out.println(lp1.equals(lp2));
+        System.out.println(lp1.hashCode());
+        System.out.println(lp2.hashCode());
     }
 }

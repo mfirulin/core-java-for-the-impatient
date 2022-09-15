@@ -21,23 +21,26 @@ class Item {
 public class Test {
     public static String toString(Object obj) {
         Class<?> cl = obj.getClass();
-        String str = cl.getName();
-        str += "[";
+		StringBuilder str = new StringBuilder();
+        str.append(cl.getName());
+        str.append("[");
     
         for (Field f : cl.getDeclaredFields()) {
             Object value = 0;
             f.setAccessible(true);
             try {
                 value = f.get(obj);
-            }
-            catch (IllegalAccessException ex) {
+            } catch (IllegalAccessException ex) {
                 System.out.println("No access");
             }
-            str += (f.getName() + "=" + value + ",");
+            str.append(f.getName());
+			str.append("=");
+			str.append(value);
+			str.append(",");
         }
     
-        str += "]";
-        return str;
+        str.append("]");
+        return str.toString();
     }
   
     public static void main(String[] args) {

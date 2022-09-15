@@ -22,7 +22,7 @@ public class LabeledPoint extends Point {
     public String getLabel() { return label; }
   
     public static void main(String[] args) {
-        LabeledPoint lpoint = new LabeledPoint("Point", 1.0, 1.0);
-        System.out.println(lpoint.getLabel() + " " + lpoint.getX() + " " + lpoint.getY());
+        LabeledPoint lp = new LabeledPoint("Point", 1.0, 1.0);
+        System.out.println(lp.getLabel() + " " + lp.getX() + " " + lp.getY());
     }
 }

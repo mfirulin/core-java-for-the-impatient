@@ -7,7 +7,16 @@ public class Test {
     private static class InternalStaticClass { }
   
     public static void main(String[] args) {
-        Class<?> cl = String[].class;
+		Class<?> cl = String.class;
+        System.out.println(cl.getName());
+        System.out.println(cl.getSimpleName());
+        System.out.println(cl.getCanonicalName());
+        System.out.println(cl.getTypeName());
+        System.out.println(cl.toString());
+        System.out.println(cl.toGenericString());
+        System.out.println();
+		
+        cl = String[].class;
         System.out.println(cl.getName());
         System.out.println(cl.getSimpleName());
         System.out.println(cl.getCanonicalName());
