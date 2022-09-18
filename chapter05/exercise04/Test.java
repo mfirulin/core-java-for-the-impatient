@@ -1,25 +1,26 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.nio.file.Paths;
 import java.io.IOException;
 import java.util.InputMismatchException;
 
 public class Test {
-    private ArrayList<Double> numbers;
+    private List<Double> numbers;
     private double sum;
     
-    public int readValues(String filename)
-    {
-        if (numbers != null)
+    public int readValues(String fileName) {
+        if (numbers != null) {
             numbers.clear();
-        else
+		} else {
             numbers = new ArrayList<>();
-        
-        try (Scanner in = new Scanner(Paths.get(filename))) {
-            while(in.hasNext())
-                numbers.add(in.nextDouble());
         }
-        catch (InputMismatchException | IOException e) {
+		
+        try (Scanner in = new Scanner(Paths.get(fileName))) {
+            while (in.hasNextDouble()) {
+                numbers.add(in.nextDouble());
+			}
+        } catch (InputMismatchException | IOException e) {
             System.err.println("Something went wrong: " + e);
             numbers.clear();
             numbers = null;
@@ -29,12 +30,13 @@ public class Test {
         return 0;
     }
 
-    public int sumOfValues(String filename)
+    public int sumOfValues(String fileName)
     {
-        int res = readValues(filename);
+        int res = readValues(fileName);
         
-        if(res != 0)
+        if (res != 0) {
             return res;
+		}
         
         sum = 0;
 		
@@ -52,7 +54,8 @@ public class Test {
         Test t = new Test();
         int res = t.sumOfValues("Test.txt");
         
-        if(res == 0) 
+        if (res == 0) { 
             System.out.println("Sum: " + t.getSum());
+		}
     }
 }

@@ -1,31 +1,26 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.nio.file.Paths;
 import java.io.IOException;
 
 public class Test {
-    public static ArrayList<Double> readValues(String filename)
-        throws IOException
-    {
-        ArrayList<Double> numbers = new ArrayList<>();
+    public static List<Double> readValues(String fileName) throws IOException {
+        List<Double> numbers = new ArrayList<>();
         
-        try (Scanner in = new Scanner(Paths.get(filename))) {
-            while(in.hasNextDouble())
+        try (Scanner in = new Scanner(Paths.get(fileName))) {
+            while (in.hasNextDouble()) {
                 numbers.add(in.nextDouble());
+			}
         }
         return numbers;
     }
     
     public static void main(String[] args) {
-        ArrayList<Double> numbers;
-        
         try {
-            numbers = readValues("Test.txt");
-            for (double d : numbers)
-                System.out.println(d);
-        }
-        catch (IOException ex) {
-            System.err.println(ex);
+            System.out.println(readValues("Test.txt"));
+        } catch (IOException e) {
+            System.err.println(e);
         }
     }
 }
