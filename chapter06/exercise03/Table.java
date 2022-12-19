@@ -11,7 +11,7 @@ public class Table<K, V> {
 
     public Entry<K, V> get(K key) {
         int index = find(key);
-        if (index > 0) {
+        if (index >= 0) {
             return entries.get(index);
         }
         return null;
