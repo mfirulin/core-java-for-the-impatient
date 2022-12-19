@@ -1,6 +1,8 @@
+import java.util.Arrays;
+
 public class Stack<E> {
-    private static final int SIZE = 5;
-    private Object[] list = new Object[SIZE];
+    private static final int CAPACITY = 5;
+    private Object[] list = new Object[CAPACITY];
     private int numberOfElements;
     
     public boolean isEmpty() {
@@ -11,16 +13,11 @@ public class Stack<E> {
         return numberOfElements;
     }
     
-    public boolean push(E e) {
+    public void push(E e) {
         if (list.length == numberOfElements) {
-            Object[] tempList = new Object[list.length + SIZE];
-            for (int i = 0; i < list.length; i++) {
-                tempList[i] = list[i];
-            }
-            list = tempList;
+            list = Arrays.copyOf(list, 2 * numberOfElements + 1);
         }
         list[numberOfElements++] = e;
-        return true;
     }
     
     @SuppressWarnings("unchecked")
@@ -29,11 +26,12 @@ public class Stack<E> {
         if (numberOfElements > 0) {
             e = (E)list[--numberOfElements]; 
         }
+        list[numberOfElements] = null;
         return e;
     }
 
     public String toString() {
-        var builder = new StringBuilder();
+        StringBuilder builder = new StringBuilder();
         builder.append("[");
         for (int i = 0; i < numberOfElements; i++) {
             builder.append(list[i].toString());
