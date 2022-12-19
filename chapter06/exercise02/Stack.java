@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Stack<E> {
     private static final int SIZE = 5;
     private Object[] list = new Object[SIZE];
@@ -7,6 +5,10 @@ public class Stack<E> {
     
     public boolean isEmpty() {
         return numberOfElements == 0;
+    }
+
+    public int getNumberOfElements() {
+        return numberOfElements;
     }
     
     public boolean push(E e) {
@@ -29,6 +31,20 @@ public class Stack<E> {
         }
         return e;
     }
+
+    public String toString() {
+        var builder = new StringBuilder();
+        builder.append("[");
+        for (int i = 0; i < numberOfElements; i++) {
+            builder.append(list[i].toString());
+            builder.append(", ");
+        }
+        
+        // Remove last ", "
+        builder.delete(builder.length() - 2, builder.length());
+        builder.append("]");
+        return builder.toString();
+    }
        
     public static void main(String[] args) {
         // Integer
@@ -37,9 +53,13 @@ public class Stack<E> {
             stackInt.push(i);
         }
         
+        System.out.println(stackInt.toString());
+
         for (int i = 1; i < 5; i++) {
-            System.out.println(stackInt.pop());
+            stackInt.pop();
         }
+
+        System.out.println(stackInt.toString());
         
         // String
         Stack<String> stackStr = new Stack<>();
@@ -47,8 +67,12 @@ public class Stack<E> {
             stackStr.push("String-" + i);
         }
         
+        System.out.println(stackStr.toString());
+
         for (int i = 1; i < 5; i++) {
-            System.out.println(stackStr.pop());
+            stackStr.pop();
         }
+
+        System.out.println(stackStr.toString());
     }
 }
