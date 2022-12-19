@@ -38,8 +38,10 @@ public class Stack<E> {
             builder.append(", ");
         }
         
-        // Remove last ", "
-        builder.delete(builder.length() - 2, builder.length());
+        // Remove last ", " if it was added
+        if (numberOfElements > 0) {
+            builder.delete(builder.length() - 2, builder.length());
+        }
         builder.append("]");
         return builder.toString();
     }
@@ -50,27 +52,27 @@ public class Stack<E> {
         for (int i = 1; i < 10; i++) {
             stackInt.push(i);
         }
-        
         System.out.println(stackInt.toString());
 
         for (int i = 1; i < 5; i++) {
             stackInt.pop();
         }
-
         System.out.println(stackInt.toString());
         
         // String
         Stack<String> stackStr = new Stack<>();
         for (int i = 1; i < 10; i++) {
-            stackStr.push("String-" + i);
+            stackStr.push("Str" + i);
         }
-        
         System.out.println(stackStr.toString());
 
         for (int i = 1; i < 5; i++) {
             stackStr.pop();
         }
+        System.out.println(stackStr.toString());
 
+        do {
+        } while (stackStr.pop() != null);
         System.out.println(stackStr.toString());
     }
 }
